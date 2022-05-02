@@ -15,12 +15,6 @@ function createWidget(data) {
   w.backgroundGradient = bgColor
   w.setPadding(1,12,1,2)
   w.spacing = 6
-
-  const time = new Date()
-  const dfTime = new DateFormatter()
-  dfTime.locale = "en"
-  dfTime.useMediumDateStyle()
-  dfTime.useNoTimeStyle()
   
   const title = w.addText(`${data.monitors[0].locationStop.properties.title}`)
   title.textColor = new Color("#ffcc66")  
