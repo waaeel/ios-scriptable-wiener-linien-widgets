@@ -9,7 +9,7 @@ Script.complete()
 function createWidget(data) {
   const w = new ListWidget()
   const bgColor = new LinearGradient()
-  bgColor.colors = [new Color("#00CB6B"), new Color("#004E2B")]
+  bgColor.colors = [new Color("#004E2B"), new Color("#004E2B")]
   bgColor.locations = [0.0, 1.0]
   w.backgroundGradient = bgColor
   w.setPadding(1,12,1,2)
