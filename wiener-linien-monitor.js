@@ -26,10 +26,10 @@ function createWidget(data) {
   title.textColor = new Color("#ffcc66")  
   title.font = new Font("Menlo", 15)
   
-  const first = w.addText(`[62] ${data.monitors[0].lines[0].towards} ${data.monitors[0].lines[0].departures.departure[0].departureTime.countdown}`)
+  const first = w.addText(`[${data.monitors[0].lines[0].name}] ${data.monitors[0].lines[0].towards} ${data.monitors[0].lines[0].departures.departure[0].departureTime.countdown}`)
   first.textColor = new Color("#ffcc66")
   first.font = new Font("Menlo", 11)
-  const second = w.addText(`[62] ${data.monitors[0].lines[0].towards} ${data.monitors[0].lines[0].departures.departure[1].departureTime.countdown}`)
+  const second = w.addText(`[${data.monitors[0].lines[0].name}] ${data.monitors[0].lines[0].towards} ${data.monitors[0].lines[0].departures.departure[1].departureTime.countdown}`)
   second.textColor = new Color("#ffcc66")
   second.font = new Font("Menlo", 11)
 
