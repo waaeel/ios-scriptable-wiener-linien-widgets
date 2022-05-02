@@ -10,7 +10,7 @@ function createWidget(data) {
   console.log(data)
   const w = new ListWidget()
   const bgColor = new LinearGradient()
-  bgColor.colors = [new Color("#29323c"), new Color("#1c1c1c")]
+  bgColor.colors = [new Color("#00CB6B"), new Color("#004E2B")]
   bgColor.locations = [0.0, 1.0]
   w.backgroundGradient = bgColor
   w.setPadding(1,12,1,2)
@@ -24,7 +24,7 @@ function createWidget(data) {
   
   const title = w.addText(`${data.monitors[0].locationStop.properties.title}`)
   title.textColor = new Color("#ffcc66")  
-  title.font = new Font("Menlo", 15)
+  title.font = new Font("Menlo", 16)
   
   const first = w.addText(`[${data.monitors[0].lines[0].name}] ${data.monitors[0].lines[0].towards} ${data.monitors[0].lines[0].departures.departure[0].departureTime.countdown}`)
   first.textColor = new Color("#ffcc66")
