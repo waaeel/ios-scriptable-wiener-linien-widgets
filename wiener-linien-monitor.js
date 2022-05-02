@@ -20,7 +20,7 @@ function createWidget(data) {
   const second = w.addText("NO SERVICE");
 
   if (
-    data.monitors[0].lines[0].towards !==
+    data.monitors[0] && data.monitors[0].lines[0].towards !==
     "BETRIEBSSCHLUSS ! BENÜTZEN SIE BITTE DIE NIGHTLINE"
   ) {
     title = w.addText(`${data.monitors[0].locationStop.properties.title}`);
