@@ -14,23 +14,23 @@ function createWidget(data) {
   w.backgroundGradient = bgColor;
   w.setPadding(1, 12, 1, 2);
   w.spacing = 6;
-
-  const title = w.addText("NO SERVICE - USE NIGHTLINE!");
-  const first = w.addText("NO SERVICE");
-  const second = w.addText("NO SERVICE");
+  
+  var titleContent = "NO SERVICE - USE NIGHTLINE!";
+  var firstContent = "NO SERVICE";
+  var secondContent = "NO SERVICE";
 
   if (
     data.monitors[0] && data.monitors[0].lines[0].towards !==
     "BETRIEBSSCHLUSS ! BENÜTZEN SIE BITTE DIE NIGHTLINE"
   ) {
-    title = w.addText(`${data.monitors[0].locationStop.properties.title}`);
-    first = w.addText(
-      `[${data.monitors[0].lines[0].name}] ${data.monitors[0].lines[0].towards} ${data.monitors[0].lines[0].departures.departure[0].departureTime.countdown}`
-    );
-    second = w.addText(
-      `[${data.monitors[0].lines[0].name}] ${data.monitors[0].lines[0].towards} ${data.monitors[0].lines[0].departures.departure[1].departureTime.countdown}`
-    );
+    titleContent = `${data.monitors[0].locationStop.properties.title}`
+    firstContent = `[${data.monitors[0].lines[0].name}] ${data.monitors[0].lines[0].towards} ${data.monitors[0].lines[0].departures.departure[0].departureTime.countdown}`
+    secondContent = `[${data.monitors[0].lines[0].name}] ${data.monitors[0].lines[0].towards} ${data.monitors[0].lines[0].departures.departure[1].departureTime.countdown}`
   }
+  
+  var title = w.addText(titleContent);
+  var first = w.addText(firstContent);
+  var second = w.addText(secondContent);
 
   title.textColor = new Color("#ffcc66");
   title.font = new Font("Menlo", 16);
